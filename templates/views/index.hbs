@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>prashantrai.com/crud</title>
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <div class="top-navbar">
+      <div class="add-update-group">
+        <a onclick="add_user_form()" class="add-update-gp">Add User</a>
+      </div>
+      <div class="search">
+        <input type="text" id="search" placeholder="Seach here by Name, Email, Phone No.. ">
+        <button onclick="" class="button search-btn">Search</button>
+      </div>
+    </div>
+
+ 
+    
+
+  <div class="both-form">
+    <div class="container hidden" id="add-con">
+      <p id="heading-form">Create User</p>
+
+
+      <div class="form-container">
+        <form id="form-user" name="user-data" method="post" class="user-form">
+          <input type="hidden" name="_id" value="">
+          <div class="form-group">
+            <input type="text" placeholder="Enter Your Name" name="name" value="" id="name1" onkeypress='return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 32))'>
+            <div id="errorname" class="error"></div>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Your Email" name="email" value="" id="email1">
+            <div id="erroremail" class="error"></div>
+          </div>
+          <div class="form-group">
+            <input type="number" placeholder="Enter Your Phone Number" name="number" value="" id="number1"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  maxlength="10">
+            <div id="errornumber" class="error"></div>
+          </div>
+          <div class="form-group">
+            <input type="file" name="image" id="image1" accept="image/png, image/jpg, image/gif, image/jpeg">
+          </div>
+          <div class="form-group">
+            <button id="btn" type="submit" class="add-user search-btn button">Add User</button>
+            <a class="cancle" onclick="cancle()">Cancel</a>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="container hidden" id="update-con">
+
+      <p id="heading-form">Update User</p>
+
+
+      <div class="form-container">
+        <form id="update-user" name="user-data" enctype="multipart/form-data" method="post" class="update-user">
+          <input type="hidden" name="_id" value="">
+          <div class="form-group">
+            <input type="text" placeholder="Enter Your Name" name="name" value="" id="name" onkeypress='return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 32))'>
+            <div id="errorname1" class="error"></div>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Your Email" name="email" value="" id="email">
+            <div id="erroremail1" class="error"></div>
+          </div>
+          <div class="form-group">
+            <input type="number" placeholder="Enter Your Phone Number" name="number" value="" id="number"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              maxlength="10">
+            <div id="errornumber1" class="error"></div>
+          </div>
+          <div class="form-group">
+            <input type="file" name="image" id="image" accept="image/png, image/jpg, image/gif, image/jpeg">
+          </div>
+          <div class="form-group">
+            <button id="btn" type="submit" class="button search-btn">Update</button>
+            <a class="cancle" onclick="cancle1()">Cancle</a>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+  {{!-- <div class="container hidden" id="add-con">
+    <p>Add User</p>
+    <form id="form-user" name="user-data" method="post" class="user-form">
+      <input type="hidden" name="_id" value="">
+      <input type="file" name="image" id="image1" required>
+      <input type="text" placeholder="Enter Your Name" name="name" value="" id="name1">
+      <input type="email" placeholder="Enter Your Email" name="email" value="" id="email1">
+      <input type="text" placeholder="Enter Your Phone Number" name="number" value="" id="number1">
+      <button id="btn" type="submit" class="add-user">Add User</button>
+      <a class="cancle" onclick="cancle()">Cancle</a>
+    </form>
+  </div> --}}
+  {{!-- <p>Update User</p>
+  <form id="update-user" name="user-data" enctype="multipart/form-data" method="post" class="update-user">
+    <input type="hidden" name="_id" value="" id="id">
+    <input type="file" name="profile" id="image">
+    <input type="text" placeholder="Enter Your Name" name="name" value="" id="name">
+    <input type="email" placeholder="Enter Your Email" name="email" value="" id="email">
+    <input type="text" placeholder="Enter Your Phone Number" name="number" value="" id="number">
+    <button id="btn" type="submit" class="update-button">Update</button>
+    <a class="cancle" onclick="cancle()">Cancle</a>
+  </form> --}}
+
+
+
+  <div class="container1">
+
+    <table id="user-data" class="user-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>User Profile</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Number</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+
+      </tbody>
+    </table>
+  </div>
+
+  <div id="page-group">
+    <!-- <span class="page" page-no="1">pagesssss</span> -->
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <script src="/js/user.js"></script>
+</body>
+
+</html>

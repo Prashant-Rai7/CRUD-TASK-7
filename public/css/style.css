@@ -1,0 +1,254 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #8049ff;
+}
+.top-navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.add-update-group {
+  margin: 20px 10px 5px 130px;
+}
+.add-update-gp {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  width: 80px;
+  background-color: hsl(232, 62%, 24%);
+}
+.add-update-gp:hover{
+  background-color: hsl(0, 0%, 100%);
+  color: black;
+}
+.search {
+  margin-left: 130px;
+  margin-top: 15px;
+}
+#search{
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 2px solid hsl(232, 100%, 58%);
+  text-align: left;
+}
+.search-btn {
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  background-color: hsl(232, 62%, 24%);
+  border: none;
+}
+.search-btn:hover{
+  background-color: hsl(0, 0%, 100%);
+  color: black;
+}
+.button {
+  background-color: hsl(253, 63%, 20%);
+  margin-left: 8px;
+  width: 100px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.button:hover{
+  background-color: hsl(0, 0%, 100%);
+  color: black;
+}
+.both-form {
+  margin: 16px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.container {
+  width: 400px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0);
+  height: auto;
+}
+#heading-form{
+  text-align: center;
+  font-size: 25px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.form-container {
+  width: 250px;
+  margin: auto
+}
+.user-form {
+  width: 1400px;
+  margin: auto;
+  margin-top: 20px;
+}
+#btn{
+  width: 80px;
+  height: 42px;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  background-color: hsl(232, 62%, 24%);
+  border: 0;
+}
+.cancle {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  width: 80px;
+  background-color: hsl(0, 100%, 50%);
+  border: 0;
+}
+h2 {
+  color: aqua;
+}
+
+table,
+tr {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.user-table {
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0);
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+table {
+  width: 80%;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(255, 255, 255);
+}
+
+thead {
+  background-color: #fff;
+}
+
+tbody a {
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+
+
+tr {
+  height: 40px;
+}
+
+.delete {
+  margin: 10px;
+}
+
+
+
+
+
+/* Add user-form */
+
+
+
+
+
+.error {
+  color: rgb(251, 111, 111);
+  font-size: 14px;
+  padding: 2px;
+}
+
+.form-group {
+  margin: 4px;
+}
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='text'] {
+  width: 250px;
+  padding: 10px;
+  border-radius: 3px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.66);
+}
+
+input[type='number'] {
+  width: 250px;
+  padding: 10px;
+  border-radius: 3px;
+  text-align: center;
+  background-color: rgb(238, 255, 255);
+  background-color: rgba(255, 255, 255, 0.66);
+
+}
+
+p {
+  margin: 10px 0px 5px 0px;
+  text-align: center;
+}
+
+
+/* Pagination Buttons Next and Prev */
+.page-btn {
+  margin: 5px;
+  padding: 15px;
+  width: 60px;
+  color: rgba(247, 249, 250, 0.938);
+  background-color: rgb(134, 15, 239);
+  border-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+button[disabled] {
+  border: 1px solid #ffffff;
+  background-color: #006eff;
+  color: #ffffff;
+}
+
+/* pagination */
+.active {
+  background-color: rgb(0, 136, 255) !important;
+  box-shadow: 1px 1px 5px rgb(255, 255, 255);
+}
+
+span {
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  color: white;
+  background-color: rgb(120, 2, 255);
+  padding: 15px;
+  margin: 5px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+#page-group {
+  width: fit-content;
+  margin: auto;
+}
