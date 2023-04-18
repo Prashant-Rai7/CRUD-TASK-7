@@ -123,6 +123,7 @@ function getUsers(page) {
     type: "GET",
     url: `http://localhost:3005/users/page?page=${page}`,
     success: function (data) {
+      $('#page-group span').remove()
       $(`#${currentPage}`).addClass("active")
       if (currentPage == 1) {
         $("#prev").attr('disabled', 'disabled');
@@ -496,9 +497,11 @@ $('#form-user').submit(function (event) {
         $('#page-group span').show()
         $('#page-group button').show()
 
-        // page = page;
-        // getUsers()
-        tbody.prepend(body);
+
+
+        $("#tbody tr").remove()
+        getUsers(currentPage)
+        // tbody.prepend(body);
 
         $('#form-user').trigger("reset")
       },
