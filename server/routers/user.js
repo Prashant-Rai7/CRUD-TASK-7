@@ -33,17 +33,18 @@ route.post("/users/add", upload, async function (req, res) {
 
   try {
 
-    if (!req.body.profile) {
-      const user = new User({ name: req.body.name, email: req.body.email, number: req.body.number })
-      await user.save()
-      console.log(user);
-      return res.send(user)
-    }
-
-    const user = new User({ name: req.body.name, email: req.body.email, number: req.body.number, profile: req.body.profile })
-    await user.save()
+    const user = new User({ name: req.body.name, email: req.body.email, number: req.body.number })
     console.log(user);
-    res.send(user)
+    if (req.body.profile) {
+      user.profile= req.body.profile
+    }
+    await user.save()
+    return res.send(user)
+
+    // const user = new User({ name: req.body.name, email: req.body.email, number: req.body.number, profile: req.body.profile })
+    // await user.save()
+    // console.log(user);
+    // res.send(user)
 
   } catch (e) {
     if (e.keyPattern.email) {
